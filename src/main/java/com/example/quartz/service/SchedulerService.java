@@ -1,5 +1,6 @@
 package com.example.quartz.service;
 
+import org.quartz.CronScheduleBuilder;
 import org.quartz.JobBuilder;
 import org.quartz.JobDetail;
 import org.quartz.Scheduler;
@@ -26,6 +27,12 @@ public class SchedulerService {
                         .withIntervalInSeconds(5) // Run every 5 seconds
                         .repeatForever())
                 .build();
+
+        // Trigger trigger = TriggerBuilder.newTrigger()
+        // .withIdentity("cronTrigger", "group1")
+        // .withSchedule(CronScheduleBuilder.cronSchedule("0/10 * * * * ?")) // Runs
+        // every 10 seconds
+        // .build();
 
         // Create Scheduler
         Scheduler scheduler = new StdSchedulerFactory().getScheduler();
