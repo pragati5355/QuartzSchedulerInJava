@@ -15,7 +15,7 @@ import lombok.NoArgsConstructor;
  * Custom http error response model to return custom error code, validation
  * erros and http status.
  * 
- * @author Mindbowser | rohit.kavthekar@mindbowser.com
+ * @author Mindbowser | pragati.gawade@mindbowser.com
  *
  */
 @JsonInclude(Include.NON_NULL)
